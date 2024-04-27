@@ -176,7 +176,7 @@ void main1(){
       if(posN2>=290){PID1(300);} 
     }
         
-//---------PROGRAM 2-------//
+//---------Start Program-------//
   if(steps == 22){
     if(jam == 7){
       if(menit >= 0){

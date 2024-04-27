@@ -87,7 +87,7 @@ void main1(){
     if (buttonState == HIGH && !buttonStateLongPress && buttonPressDuration >= minButtonLongPressDuration) {
       buttonStateLongPress = true;
       steps = 22;
-      Serial.println("Button1 long pressed");
+      Serial.println("Button long press -- start program");
     }
       
     if (buttonState == LOW && buttonStatePrevious == HIGH) {
@@ -96,7 +96,7 @@ void main1(){
 
       if (buttonPressDuration < minButtonLongPressDuration) {
         steps = 20;
-        Serial.println("Button1 pressed shortly");
+        Serial.println("Button short press -- kalibrasi timur");
       }
     }
     previousButtonMillis = currentMillis;
@@ -115,14 +115,14 @@ void main1(){
     if (buttonState1 == HIGH && !buttonStateLongPress1 && buttonPressDuration1 >= minButtonLongPressDuration1) {
       buttonStateLongPress1 = true;
       steps = 30;
-      Serial.println("Button2 long pressed");
+      Serial.println("Button long press -- Manual Move");
     }
     if (buttonState1 == LOW && buttonStatePrevious1 == HIGH) {
       buttonStatePrevious1 = LOW;
       buttonStateLongPress1 = false;
       if (buttonPressDuration1 < minButtonLongPressDuration1) {
         steps = 25;
-        Serial.println("Button2 pressed shortly");
+        Serial.println("Button short press ");
       }
     }
     previousButtonMillis1 = currentMillis1;
